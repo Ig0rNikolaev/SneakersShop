@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isAuth = true
     @State private var email = ""
     @State private var password = ""
+    @State private var confirmPassword = ""
 
     var body: some View {
         VStack(spacing: 30) {
-            Text("Авторизация")
-                .padding()
+            Text(isAuth ? "Авторизация" : "Регистрация")
+                .padding(isAuth ? 16 : 24)
                 .padding(.horizontal, 30)
                 .font(.title2.bold())
                 .background(Color("whiteAlfa"))
-                .cornerRadius(30)
+                .cornerRadius(isAuth ? 30 : 60)
                 .padding(.bottom, 30)
                 .foregroundColor(Color("darkBrown"))
 
@@ -37,13 +39,31 @@ struct ContentView: View {
                     .padding(8)
                     .padding(.horizontal, 12)
 
+                if !isAuth {
+                    SecureField("Повторите пароль", text: $confirmPassword)
+                        .padding()
+                        .background(Color("whiteAlfa"))
+                        .cornerRadius(12)
+                        .padding(8)
+                        .padding(.horizontal, 12)
+                }
+
                 Button {
-                    print("Войти")
+                    if isAuth {
+
+                    } else {
+                        self.email = ""
+                        self.password = ""
+                        self.confirmPassword = ""
+                        isAuth.toggle()
+                    }
                 } label: {
-                    Text("Войти")
+                    Text(isAuth ? "Войти" : "Создать аккаунт")
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(LinearGradient(colors: [Color(.systemYellow), Color(.systemOrange)], startPoint: .leading, endPoint: .trailing))
+                        .background(LinearGradient(colors: [Color(.systemOrange), Color(.systemRed)],
+                                                   startPoint: .leading,
+                                                   endPoint: .trailing))
                         .cornerRadius(12)
                         .padding(8)
                         .padding(.horizontal, 12)
@@ -52,9 +72,9 @@ struct ContentView: View {
                 }
 
                 Button {
-                    print("Еще не с нами?")
+                    isAuth.toggle()
                 } label: {
-                    Text("Еще не с нами?")
+                    Text(isAuth ? "Еще не с нами?" : "Уже есть аккаунт")
                         .padding(.horizontal)
                         .frame(maxWidth: .infinity)
                         .cornerRadius(12)
@@ -63,19 +83,21 @@ struct ContentView: View {
                         .font(.title3.bold())
                         .foregroundColor(Color("darkBrown"))
                 }
-
             }
             .padding()
             .padding(.top, 15)
             .background(Color("whiteAlfa"))
             .cornerRadius(25)
-            .padding(30)
+            .padding(isAuth ? 30 : 12)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("bg")
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .ignoresSafeArea())
+            .ignoresSafeArea()
+            .blur(radius: isAuth ? 0 : 7)
+        )
+        .animation(Animation.easeIn(duration: 0.3), value: isAuth)
     }
 }
 
