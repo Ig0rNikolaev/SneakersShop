@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AuthView.swift
 //  SneakersShop
 //
 //  Created by Игорь Николаев on 25.07.2023.
@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AuthView: View {
     @State private var isAuth = true
+    @State private var isTabbarView = false
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
@@ -50,7 +51,7 @@ struct ContentView: View {
 
                 Button {
                     if isAuth {
-
+                        isTabbarView.toggle()
                     } else {
                         self.email = ""
                         self.password = ""
@@ -98,11 +99,14 @@ struct ContentView: View {
             .blur(radius: isAuth ? 0 : 7)
         )
         .animation(Animation.easeIn(duration: 0.3), value: isAuth)
+        .fullScreenCover(isPresented: $isTabbarView) {
+            TabbarView()
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AuthView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AuthView()
     }
 }
