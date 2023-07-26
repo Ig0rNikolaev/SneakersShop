@@ -12,9 +12,9 @@ struct TabbarView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView {
-                createTabItem(modul: Text("Каталог"), name: "Каталог", icon: "menucard")
-                createTabItem(modul: Text("Корзина"), name: "Корзина", icon: "cart")
-                createTabItem(modul: Text("Профиль"), name: "Профиль", icon: "person.circle")
+                createTabItem(modul: CatalogView(), name: "Каталог", icon: "menucard")
+                createTabItem(modul: CartView(), name: "Корзина", icon: "cart")
+                createTabItem(modul: ProfileView(), name: "Профиль", icon: "person.circle")
             }
         }
     }

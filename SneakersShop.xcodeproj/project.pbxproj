@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DB964BE12A719CA90021B782 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB964BE02A719CA90021B782 /* TabbarView.swift */; };
+		DB964BE52A71A24D0021B782 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB964BE42A71A24D0021B782 /* CatalogView.swift */; };
+		DB964BE72A71A2D00021B782 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB964BE62A71A2D00021B782 /* CartView.swift */; };
+		DB964BE92A71A3070021B782 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB964BE82A71A3070021B782 /* ProfileView.swift */; };
 		DBDE5FC72A700150009BEFB9 /* SneakersShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDE5FC62A700150009BEFB9 /* SneakersShopApp.swift */; };
 		DBDE5FC92A700150009BEFB9 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDE5FC82A700150009BEFB9 /* AuthView.swift */; };
 		DBDE5FCB2A700151009BEFB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDE5FCA2A700151009BEFB9 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 
 /* Begin PBXFileReference section */
 		DB964BE02A719CA90021B782 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		DB964BE42A71A24D0021B782 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		DB964BE62A71A2D00021B782 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		DB964BE82A71A3070021B782 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DBDE5FC32A700150009BEFB9 /* SneakersShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakersShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBDE5FC62A700150009BEFB9 /* SneakersShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakersShopApp.swift; sourceTree = "<group>"; };
 		DBDE5FC82A700150009BEFB9 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -49,6 +55,9 @@
 				DBDE5FC62A700150009BEFB9 /* SneakersShopApp.swift */,
 				DBDE5FC82A700150009BEFB9 /* AuthView.swift */,
 				DB964BE02A719CA90021B782 /* TabbarView.swift */,
+				DB964BE42A71A24D0021B782 /* CatalogView.swift */,
+				DB964BE62A71A2D00021B782 /* CartView.swift */,
+				DB964BE82A71A3070021B782 /* ProfileView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -156,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB964BE72A71A2D00021B782 /* CartView.swift in Sources */,
 				DB964BE12A719CA90021B782 /* TabbarView.swift in Sources */,
 				DBDE5FC92A700150009BEFB9 /* AuthView.swift in Sources */,
 				DBDE5FC72A700150009BEFB9 /* SneakersShopApp.swift in Sources */,
+				DB964BE92A71A3070021B782 /* ProfileView.swift in Sources */,
+				DB964BE52A71A24D0021B782 /* CatalogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
