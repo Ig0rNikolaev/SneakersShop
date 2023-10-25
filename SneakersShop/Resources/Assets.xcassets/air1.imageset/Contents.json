@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "vse-modeli-nike-air-jordan-—-molodezhnyj-czentr-01.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
