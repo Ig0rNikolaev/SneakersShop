@@ -21,6 +21,6 @@ struct CatalogDetailView_Previews: PreviewProvider {
                                                      title: "AIR JORDAN 1",
                                                      imageUrl: "Not found",
                                                      price: 30000,
-                                                     description: "Майкл Джордан и кроссовки Nike Air Jordan 1 ворвались на площадку НБА в 1985 году."))
+                                                     description: "Майкл Джордан и кроссовки Nike Air Jordan 1 ворвались на площадку NBA в 1985 году."))
     }
 }
